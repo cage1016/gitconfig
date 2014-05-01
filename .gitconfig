@@ -1,0 +1,56 @@
+[user]
+	name = Kai Chu Chung
+	email = cage.chung@gmail.com
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+	autocrlf = false
+[alias]
+    st = status
+    sts = "status -s" 
+    co = checkout
+    br = branch
+    mg = merge
+    ci = commit
+    mdnd = commit --amend --no-edit
+    dt = difftool
+    mt = mergetool
+    last = log -1 HEAD
+    cf = config
+    line = log --oneline
+    re = remote
+    di = diff
+	dif = diff --cached
+    type = "cat-file -t"
+    dump = "cat-file -p"
+    latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+	ls = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    hist = log --pretty=format:\"%C(yellow)%h %C(red)%d %C(reset)%s %C(green)[%an] %C(blue)%ad\" --topo-order --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+[diff]
+    tool = WinMerge
+[difftool "WinMerge"]
+    cmd = \"C:/Program Files (x86)/WinMerge/WinMergeU.exe\" -e -ub -dl \"$LOCAL\" -dr \"$REMOTE\" \"$LOCAL\" \"$REMOTE\" 
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow bold
+	changed = green bold
+	untracked = cyan bold
