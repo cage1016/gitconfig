@@ -33,6 +33,7 @@
     hist = log --pretty=format:\"%C(yellow)%h %C(red)%d %C(reset)%s %C(green)[%an] %C(blue)%ad\" --topo-order --graph --date=short
     type = cat-file -t
     dump = cat-file -p
+	track = log --pretty=raw --graph
 [diff]
     tool = WinMerge
 [difftool "WinMerge"]
